@@ -1,5 +1,5 @@
-import axios, { AxiosResponse } from "axios";
-import type { TMDBResponse } from "../types/movie";
+import axios from "axios";
+import type { TMDBResponse } from "../types/Movie";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -29,7 +29,7 @@ export async function fetchMovies({
   };
 
   const url = `${BASE_URL}/search/movie`;
-  const response: AxiosResponse<TMDBResponse> = await axios.get(url, config);
+  const response = await axios.get<TMDBResponse>(url, config);
   return response.data;
 }
 
