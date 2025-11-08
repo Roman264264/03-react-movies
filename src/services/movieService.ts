@@ -1,7 +1,13 @@
 import axios from "axios";
-import type { TMDBResponse } from "../types/movie";
+import type { Movie } from "../types/movie";
 
 const BASE_URL = "https://api.themoviedb.org/3";
+export interface TMDBResponse {
+  page: number;
+  results: Movie[];
+  total_pages: number;
+  total_results: number;
+}
 
 export interface FetchMoviesParams {
   query: string;
