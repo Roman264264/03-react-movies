@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
-import type { Movie } from "../../types/Movie";
+import type { Movie } from "../../types/movie123";
 import styles from "./MovieModal.module.css";
-import { getImageUrl } from "../../services/MovieService";
+import { getImageUrl } from "../../services/movieService123";
 
 interface MovieModalProps {
   movie: Movie | null;
